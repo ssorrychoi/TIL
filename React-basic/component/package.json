@@ -1,0 +1,50 @@
+{
+  "name": "component",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "eslint-config-airbnb": "^18.0.1",
+    "faker": "^4.1.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": 0,
+      "react/button-has-type": 0,
+      "jsx-a11y/label-has-associated-control": 0,
+      "quotes": 0,
+      "react/destructuring-assignment": 0,
+      "react/prop-types": 0,
+      "arrow-parens": 0,
+      "arrow-body-style": 0,
+      "jsx-a11y/anchor-is-valid": 0,
+      "react/self-closing-comp": 0,
+      "lines-between-class-members": 0,
+      "react/state-in-constructor": 0,
+      "react/no-access-state-in-setstate": 0
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -2,7 +2,8 @@ import React from "react";
 import ProductRow from "./ProductRow";
 import ProductCategoryRow from "./ProductCategoryRow";
 
-const ProductTable = props => {
+const ProductTable = ({ data, keyword, checked }) => {
+  if (data === null) return <h2>Loading...</h2>;
   let prevCategory = "";
 
   return (
@@ -14,34 +15,21 @@ const ProductTable = props => {
         </tr>
       </thead>
       <tbody>
-        {props.data.map(
-          ({ category, price, stocked, name, keyword, checked }) => {
-            if (category !== prevCategory) {
-              prevCategory = category;
-              return (
-                <>
-                  <ProductCategoryRow category={category} />
-                  <ProductRow
-                    name={name}
-                    price={price}
-                    stocked={stocked}
-                    keyword={keyword}
-                    checked={checked}
-                  />
-                </>
-              );
-            }
-            return (
-              <ProductRow
-                name={name}
-                price={price}
-                stocked={stocked}
-                keyword={keyword}
-                checked={checked}
-              />
-            );
+        {data.map(({ category, price, stocked, name }) => {
+          const products = { name, price, stocked };
+          function categoryFilter(category) {
+            if (prevCategory !== category) {
+              return <ProductCategoryRow category={category} />;
+            } else return null;
           }
-        )}
+          prevCategory = category;
+          return (
+            <>
+              {categoryFilter(category)}
+              <ProductRow {...products} keyword={keyword} checked={checked} />
+            </>
+          );
+        })}
       </tbody>
     </table>
   );

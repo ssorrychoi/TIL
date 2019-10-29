@@ -1,10 +1,14 @@
 import React from "react";
 
-const ProductRow = props => {
+const ProductRow = ({ name, keyword, stocked, price, checked }) => {
+  const loweredName = name.toLowerCase();
+  const loweredKeyword = keyword.toLowerCase();
+  if (checked && !stocked) return null;
+  if (!loweredName.includes(loweredKeyword)) return null;
   return (
-    <tr style={{ color: !props.stocked && "red" }}>
-      <td>{props.name}</td>
-      <td>{props.price}</td>
+    <tr>
+      <td style={{ color: !stocked && "red" }}>{name}</td>
+      <td>{price}</td>
     </tr>
   );
 };

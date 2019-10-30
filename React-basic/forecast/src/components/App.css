@@ -1,0 +1,10 @@
+.header-padding {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container {
+  border: 2px solid rgb(107, 41, 212);
+  border-radius: 30px;
+}

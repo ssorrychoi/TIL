@@ -1,0 +1,22 @@
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.season-display.Winter i {
+  color: deepskyblue;
+}
+
+.Winter {
+  color: darkblue;
+  background-color: azure;
+}
+
+.season-display.Summer i {
+  color: darkred;
+}
+.Summer {
+  color: deeppink;
+  background-color: indianred;
+}

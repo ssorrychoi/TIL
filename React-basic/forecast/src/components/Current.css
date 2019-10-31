@@ -1,0 +1,25 @@
+.contents {
+  font-size: 1.5rem;
+}
+.weather {
+  display: flex;
+  justify-content: flex-start;
+}
+.temperature {
+  font-size: 4rem;
+}
+.additional-info {
+  font-size: 1.5rem;
+}
+.grid-contents {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.units {
+  display: flex;
+  font-size: 2.5rem;
+}
+.clickable {
+  color: burlywood;
+  cursor: pointer;
+}

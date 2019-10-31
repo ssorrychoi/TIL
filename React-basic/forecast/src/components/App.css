@@ -7,4 +7,5 @@
 .container {
   border: 2px solid rgb(107, 41, 212);
   border-radius: 30px;
+  max-width: 700px;
 }

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 50vh;
+}
+.bbibbi {
+  padding: 7rem 0.5rem 7rem 0.5rem;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-right: 200px;
+  margin-left: 200px;
+  background: #38393a;
+  color: white;
+  border-radius: 10px;
+}
+.bbibbi input {
+  flex: 1; /*버튼을 뺀 빈 공간을 모두 채워줍니다 */
+  font-size: 2rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #c5f6fa;
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+}
+
+@import url("https://fonts.googleapis.com/css?family=ZCOOL+QingKe+HuangYou&display=swap");

@@ -1,0 +1,14 @@
+.table {
+  /* position: relative; */
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.center {
+  justify-content: center;
+  align-content: center;
+  padding-top: 100px;
+}

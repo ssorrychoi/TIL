@@ -5,10 +5,11 @@
   font-size: 80px;
 }
 .padding-top {
-  padding-top: 10vh;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 .padding-bottom {
-  padding-bottom: 5vh;
+  padding-bottom: 100px;
 }
 /* @font-face {
   font-family: "DOSMyungjo";

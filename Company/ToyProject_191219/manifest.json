@@ -1,0 +1,23 @@
+{
+  "name": "Toy Project",
+  "version" : "1.0",
+  "description": "Toy Story",
+  "icons": {
+    "128": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "coin.png",
+    "default_popup": "1.html",
+    "default_title": "This is Toy Extension :)"
+  },
+  "permissions": [
+    "activeTab",
+    "declarativeContent"
+  ],
+  "omnibox": {"keyword": "nt"},
+  "manifest_version": 2
+}

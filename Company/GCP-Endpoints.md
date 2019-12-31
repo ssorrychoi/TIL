@@ -1,14 +1,4 @@
-# 20191230
-
-## To Do List
-
-- GCP Endpoints 학습하기
-
----
-
-## TIL
-
-# GCP Endpoints #DAY1
+# GCP Endpoints
 
 ## Endpoints란?
 

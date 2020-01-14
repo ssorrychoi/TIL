@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Vue Sample</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <script src="https://unpkg.com/vue@2.3.3"></script>
+    <script>
+        new Vue({
+          el:'#app',
+          data:{
+            message: 'Hello Vue.js!'
+          },
+          beforeCreate:function(){
+            console.log("beforeCreated");
+          },
+          created: function(){
+            console.log("created");
+          },
+          mounted: function(){
+            console.log("mounted");
+            this.message="wurrup!";
+          },
+          updated: function(){
+            console.log("updated");
+          }
+        })
+    </script>
+</body>
+</html>

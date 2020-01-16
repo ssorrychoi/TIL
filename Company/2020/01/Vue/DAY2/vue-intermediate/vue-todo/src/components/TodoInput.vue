@@ -21,17 +21,19 @@
   import Modal from "./common/Modal";
 
   export default {
-    data: function () {
+    data() {
       return {
         newTodoItem: "",
         showModal: false
       }
     },
     methods: {
-      addTodo: function () {
+      addTodo() {
         if (this.newTodoItem !== '') {
-          this.$emit('addTodoItem', this.newTodoItem);
+          // this.$emit('addTodoItem', this.newTodoItem);
           // var obj = {completed:false, item:this.newTodoItem};
+
+          this.$store.commit('addOneItem',this.newTodoItem);
           // // 저장하는 로직
           // localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
           this.clearInput();
@@ -39,12 +41,12 @@
           this.showModal = !this.showModal;
         }
       },
-      clearInput: function () {
+      clearInput() {
         this.newTodoItem = '';
       }
     },
     components: {
-      Modal: Modal
+      Modal
     }
   }
 </script>
@@ -78,7 +80,8 @@
     color: white;
     vertical-align: middle;
   }
-  .closeModalBtn{
-    color:#42b983;
+
+  .closeModalBtn {
+    color: #42b983;
   }
 </style>

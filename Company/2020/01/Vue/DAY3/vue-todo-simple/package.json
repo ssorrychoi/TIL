@@ -1,5 +1,5 @@
 {
-  "name": "vue-todo",
+  "name": "vue-todo-simple",
   "description": "A Vue.js project",
   "version": "1.0.0",
   "author": "ssorrychoi <zzaesung17@gmail.com>",
@@ -10,8 +10,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "vue": "^2.5.11",
-    "vuex": "^3.1.2"
+    "vue": "^2.5.11"
   },
   "browserslist": [
     "> 1%",

@@ -5,7 +5,7 @@
         <div class="col-md-6">
           <CmtHeader></CmtHeader>
           <CmtInput></CmtInput>
-          <CmtList></CmtList>
+          <CmtList v-bind:propsdata="commentList"></CmtList>
         </div>
       </div>
     </div>
@@ -18,12 +18,25 @@
   import CmtList from './components/CmtList'
 
   export default {
-
+    data(){
+      return{
+        commentList: []
+      }
+    },
     components: {
       CmtHeader,
       CmtInput,
       CmtList
-    }
+    },
+    created() {
+      if(localStorage.length>0){
+        for (var i = 0; i < localStorage.length; i++) {
+          if (localStorage.key(i) !== 'loglevel:webpack-dev-server') {
+            this.commentList.push(localStorage.key(i));
+          }
+        }
+      }
+    },
   }
 </script>
 

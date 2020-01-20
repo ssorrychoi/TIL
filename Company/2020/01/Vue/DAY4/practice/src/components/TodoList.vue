@@ -5,7 +5,7 @@
       <!--      <li class="shadow" v-for="item in todoItems" v-bind:key="item">-->
 
       <!--   v-for 가 몇개가 됐건 해당 list의 순서를 부여하는 것 => index   -->
-      <li class="shadow" v-for="(item , index) in propsdata" v-bind:key="item.item">
+      <li class="shadow" v-for="(item , index) in this.$store.state.todoItems" v-bind:key="item.item">
         <i
           class="checkBtn fas fa-check"
           v-bind:class="{checkBtnCompleted: item.completed}"
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  props: ["propsdata"],
+  // props: ["propsdata"],
   // App.vue로 보냄
   // data() {
   //  return {
@@ -32,14 +32,17 @@ export default {
   // },
   methods: {
     removeTodo(item, index) {
-      this.$emit("removeItem", item, index);
+      //this.$emit("removeItem", item, index);
+
+      this.$store.commit("removeOneItem", {item,index});
 
       //App.vue 로 보내줌
       //localStorage.removeItem(item);
       //this.todoItems.splice(index, 1);
     },
     toggleComplete(item, index) {
-      this.$emit("toggleItem", item, index);
+      // this.$emit("toggleItem", item, index);
+      this.$store.commit('toggleOneItem',{item,index});
       //item.completed = !item.completed;
       // localStorage의 값 갱신
       //localStorage.removeItem(item.item);

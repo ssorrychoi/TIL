@@ -23,7 +23,8 @@ export default {
 
         // App.vue로 올려보냄
         //this.$emit('이벤트이름','인자1','인자2', ... );
-        this.$emit("addTodoItem", this.newTodoItem);
+        // this.$emit("addTodoItem", this.newTodoItem);
+        this.$store.commit('addOneItem',this.newTodoItem);
         this.clearInput();
       }
     },
@@ -51,18 +52,20 @@ input:focus {
   font-size: 0.9rem;
 }
 
+.addBtn {
+  color: white;
+  vertical-align: middle;
+}
+
 .addContainer {
   float: right;
-  background: linear-gradient(to right, #6478fb, #8763fb);
+  background: linear-gradient(to right, #f7fbf9, #1b1b1b);
   display: block;
   width: 3rem;
   border-radius: 0 5px 5px 0;
 }
 
-.addBtn {
-  color: white;
-  vertical-align: middle;
-}
+
 
 .closeModalBtn {
   color: #42b983;
